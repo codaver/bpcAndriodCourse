@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Пример1</string>
+    <string name="enter_text">Введите ваше сообщение здесь...</string>
+    <string name="email">Отправить Email</string>
+    <string name="preview">Предпросмотр</string>
+</resources>
