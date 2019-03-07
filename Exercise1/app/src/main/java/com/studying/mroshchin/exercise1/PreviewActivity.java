@@ -19,7 +19,7 @@ public class PreviewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_preview);
         Intent intent = getIntent();
         final String message = intent.getStringExtra(EXTRA_MESSAGE);
-        TextView textView = (TextView) findViewById(R.id.messageView);
+        TextView textView = findViewById(R.id.messageView);
         textView.setText(message);
         final Button emailButton = findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {

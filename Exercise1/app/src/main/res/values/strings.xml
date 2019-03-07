@@ -2,6 +2,6 @@
 <resources>
     <string name="app_name">Exercise1</string>
     <string name="preview">Preview</string>
-    <string name="enter_text">Type your message here...</string>
-    <string name="email">Send Email</string>
+    <string name="hint_enter_text">Type your message here…</string>
+    <string name="send_email">Send Email</string>
 </resources>
