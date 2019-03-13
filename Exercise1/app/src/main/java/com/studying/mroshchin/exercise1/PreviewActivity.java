@@ -23,9 +23,8 @@ public class PreviewActivity extends AppCompatActivity {
     }
 
     public void launchEmailActivity(View view) {
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
         emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Test Recipient"});
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Test subject");
 
