@@ -5,7 +5,6 @@ import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,21 +20,19 @@ public class PreviewActivity extends AppCompatActivity {
         final String message = intent.getStringExtra(EXTRA_MESSAGE);
         TextView textView = findViewById(R.id.messageView);
         textView.setText(message);
-        final Button emailButton = findViewById(R.id.emailButton);
-        emailButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                launchEmailActivity(message);
-            }
-        });
     }
 
-    public void launchEmailActivity(String message) {
+    public void launchEmailActivity(View view) {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.setType("text/plain");
         emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Test Recipient"});
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Test subject");
+
+        Intent intent = getIntent();
+        final String message = intent.getStringExtra(EXTRA_MESSAGE);
         emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+
         if (emailIntent.resolveActivity(getPackageManager()) != null) {
             Toast.makeText(PreviewActivity.this, "Opening mailing app", Toast.LENGTH_SHORT).show();
             startActivity(emailIntent);
