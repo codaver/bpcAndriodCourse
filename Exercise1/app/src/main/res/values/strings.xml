@@ -4,4 +4,5 @@
     <string name="preview">Preview</string>
     <string name="hint_enter_text">Type your message here…</string>
     <string name="send_email">Send Email</string>
+    <string name="error_message">There is no email client installed</string>
 </resources>

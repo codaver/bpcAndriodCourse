@@ -9,16 +9,15 @@
         android:id="@+id/previewButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_below="@+id/messageText"
-        android:text="@string/preview"
-        android:onClick="launchPreviewActivity"/>
+        android:layout_centerHorizontal="true"
+        android:text="@string/preview" />
 
     <EditText
         android:id="@+id/messageText"
-        android:layout_alignParentTop="true"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:inputType="textPersonName"
-        android:hint="@string/hint_enter_text" />
+        android:layout_alignParentTop="true"
+        android:hint="@string/hint_enter_text"
+        android:inputType="textPersonName" />
 </RelativeLayout>

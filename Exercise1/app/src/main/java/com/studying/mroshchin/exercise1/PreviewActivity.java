@@ -1,16 +1,25 @@
 package com.studying.mroshchin.exercise1;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static com.studying.mroshchin.exercise1.MainActivity.EXTRA_MESSAGE;
-
 public class PreviewActivity extends AppCompatActivity {
+
+    public static final String EXTRA_MESSAGE =
+            "com.studying.mroshchin.exercise1.extra.MESSAGE";
+
+    public static void start(Activity activity, String message) {
+        Intent intent = new Intent(activity, PreviewActivity.class);
+        intent.putExtra(EXTRA_MESSAGE, message);
+        activity.startActivity(intent);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +29,12 @@ public class PreviewActivity extends AppCompatActivity {
         final String message = intent.getStringExtra(EXTRA_MESSAGE);
         TextView textView = findViewById(R.id.messageView);
         textView.setText(message);
+        Button emailButton = findViewById(R.id.emailButton);
+        emailButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                launchEmailActivity(v);
+            }
+        });
     }
 
     public void launchEmailActivity(View view) {
@@ -33,10 +48,9 @@ public class PreviewActivity extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_TEXT, message);
 
         if (emailIntent.resolveActivity(getPackageManager()) != null) {
-            Toast.makeText(PreviewActivity.this, "Opening mailing app", Toast.LENGTH_SHORT).show();
             startActivity(emailIntent);
         } else {
-            Toast.makeText(PreviewActivity.this, "There is no email client installed.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(PreviewActivity.this, R.string.error_message, Toast.LENGTH_SHORT).show();
         }
     }
 }
