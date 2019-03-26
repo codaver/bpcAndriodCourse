@@ -32,12 +32,12 @@ public class PreviewActivity extends AppCompatActivity {
         Button emailButton = findViewById(R.id.emailButton);
         emailButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                launchEmailActivity(v);
+                launchEmailActivity();
             }
         });
     }
 
-    public void launchEmailActivity(View view) {
+    public void launchEmailActivity() {
         Intent emailIntent = new Intent(Intent.ACTION_SENDTO);
         emailIntent.setData(Uri.parse("mailto:"));
         emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[]{"Test Recipient"});
