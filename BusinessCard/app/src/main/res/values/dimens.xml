@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="photo_height">200dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+    <dimen name="default_margin">8dp</dimen>
+    <dimen name="left_margin">50dp</dimen>
+    <dimen name="icon_size">50dp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="info_line_height">28dp</dimen>
+    <dimen name="info_text_height">100dp</dimen>
+</resources>

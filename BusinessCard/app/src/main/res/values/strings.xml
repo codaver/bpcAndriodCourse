@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Roshchin Mikhail</string>
+    <string name="my_photo_description">Photo of me</string>
+    <string name="driving_experience">Driving a car since 2017</string>
+    <string name="android_experience">Studying Android development</string>
+    <string name="disclaimer">“© 2019 Roshchin Mikhail”</string>
+    <string name="info">I\'m studying software engineering in NRNU MEPhI. I know a bit of C, Python
+        and Java. I hope I\'ll finish it successfully. I like drone-racing and video games. Now I\'m
+        keen on 3D design and 3D printing. Feel free to ask me some questions.</string>
+    <string name="send">SEND MESSAGE</string>
+    <string name="hint_enter_text">Enter message</string>
+    <string name="error_message">No mailing app</string>
+</resources>

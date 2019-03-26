@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/photo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/photo_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/my_photo_description"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/me" />
+
+    <ImageView
+        android:id="@+id/car_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/photo"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/car" />
+
+    <TextView
+        android:id="@+id/driving_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:layout_alignTop="@+id/car_icon"
+        android:layout_toEndOf="@+id/car_icon"
+        android:gravity="center"
+        android:paddingEnd="@dimen/padding"
+        android:paddingStart="@dimen/padding"
+        android:text="@string/driving_experience"
+        android:textSize="@dimen/text_size" />
+
+    <ImageView
+        android:id="@+id/android_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/car_icon"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/android" />
+
+    <TextView
+        android:id="@+id/android_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:layout_alignTop="@+id/android_icon"
+        android:layout_toEndOf="@+id/android_icon"
+        android:gravity="center"
+        android:paddingEnd="@dimen/padding"
+        android:paddingStart="@dimen/padding"
+        android:text="@string/android_experience"
+        android:textSize="@dimen/text_size" />
+
+    <TextView
+        android:id="@+id/personal_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_text_height"
+        android:layout_below="@+id/android_icon"
+        android:layout_marginEnd="@dimen/left_margin"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:gravity="center_vertical|start"
+        android:padding="@dimen/padding"
+        android:text="@string/info"
+        android:textSize="@dimen/text_size" />
+
+    <EditText
+        android:id="@+id/messageText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/icon_size"
+        android:layout_below="@+id/personal_info"
+        android:layout_marginStart="@dimen/left_margin"
+        android:hint="@string/hint_enter_text"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/messageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/messageText"
+        android:layout_below="@+id/messageText"
+        android:text="@string/send" />
+
+    <ImageView
+        android:id="@+id/telegram"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/default_margin"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/telegram" />
+
+    <ImageView
+        android:id="@+id/instagram"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="@dimen/default_margin"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/instagram" />
+</RelativeLayout>
