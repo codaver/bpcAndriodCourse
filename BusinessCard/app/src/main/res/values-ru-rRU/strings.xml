@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Рощин Михаил</string>
+    <string name="disclaimer">“© 2019 Рощин Михаил”</string>
+    <string name="info_land">Для просмотра инфо перейдите в портретный режим</string>
+    <string name="send">ОТПРАВИТЬ</string>
+    <string name="hint_enter_text">Введите сообщение</string>
+    <string name="error_message">Почтовое приложение не найдено</string>
+    <string name="driving_experience">Вожу машину с 2017</string>
+    <string name="my_photo_description">Мое фото</string>
+    <string name="android_experience">Учусь Android разработке</string>
+    <string name="info">Я учусь на программе \"программная инженерия\" в НИЯУ МИФИ. Знаю немного C,
+        Python и Java. Надеюсь я успешно доучусь. Я занимаюсь дрон-рейсингом и люблю компьютерные игры
+        Сейчас я начал заниматься 3D печатью и моделированием. Пишите мне.</string>
+</resources>
