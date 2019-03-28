@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.util.TypedValue;
@@ -71,7 +72,20 @@ public class MainActivity extends AppCompatActivity {
             layout.addView(disclaimer);
         } else {
             // code for landscape mode
-
+            ConstraintLayout layout = findViewById(R.id.layout_land);
+            TextView disclaimer = new TextView(this);
+            disclaimer.setText(getString(R.string.disclaimer));
+            disclaimer.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.text_size));
+            ConstraintLayout.LayoutParams params = new ConstraintLayout.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT, // Width
+                    ViewGroup.LayoutParams.WRAP_CONTENT // Height
+            );
+            params.endToEnd = 0;
+            params.startToStart = 0;
+            params.bottomToBottom = 0;
+            params.bottomMargin = 10;
+            disclaimer.setLayoutParams(params);
+            layout.addView(disclaimer);
         }
     }
 

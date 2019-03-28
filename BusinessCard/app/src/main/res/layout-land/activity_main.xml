@@ -2,17 +2,125 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_land"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:adjustViewBounds="false"
+        android:id="@+id/photo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/photo_height_land"
         android:contentDescription="@string/my_photo_description"
-        android:scaleType="centerInside"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/me" />
 
+    <ImageView
+        android:id="@+id/car_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/photo"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:paddingEnd="@dimen/padding"
+        android:paddingStart="@dimen/padding"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo"
+        app:srcCompat="@drawable/car" />
+
+    <TextView
+        android:id="@+id/driving_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:gravity="center"
+        android:text="@string/driving_experience"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintStart_toEndOf="@+id/car_icon"
+        app:layout_constraintTop_toTopOf="@id/car_icon" />
+
+    <ImageView
+        android:id="@+id/android_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/photo"
+        android:layout_marginStart="@dimen/left_margin"
+        android:layout_marginTop="@dimen/default_margin"
+        android:paddingEnd="@dimen/padding"
+        android:paddingStart="@dimen/padding"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/car_icon"
+        app:srcCompat="@drawable/android" />
+
+    <TextView
+        android:id="@+id/android_info"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/info_line_height"
+        android:gravity="center"
+        android:text="@string/android_experience"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintStart_toEndOf="@+id/android_icon"
+        app:layout_constraintTop_toTopOf="@id/android_icon" />
+
+    <TextView
+        android:id="@+id/personal_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/info_land"
+        android:textSize="@dimen/text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photo" />
+
+    <EditText
+        android:id="@+id/messageText"
+        android:layout_width="@dimen/zero"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/left_margin"
+        android:hint="@string/hint_enter_text"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@id/messageButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/android_info"/>
+
+    <Button
+        android:id="@+id/messageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/messageText"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:text="@string/send"
+        app:layout_constraintBottom_toBottomOf="@id/messageText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/messageText"/>
+
+    <ImageView
+        android:id="@+id/telegram"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginEnd="@dimen/default_margin"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/telegram" />
+
+    <ImageView
+        android:id="@+id/instagram"
+        android:layout_width="@dimen/icon_size"
+        android:layout_height="@dimen/icon_size"
+        android:layout_marginBottom="@dimen/default_margin"
+        android:layout_marginStart="@dimen/default_margin"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/instagram" />
 </android.support.constraint.ConstraintLayout>

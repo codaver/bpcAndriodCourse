@@ -7,6 +7,7 @@
     <string name="info">I\'m studying software engineering in NRNU MEPhI. I know a bit of C, Python
         and Java. I hope I\'ll finish it successfully. I like drone-racing and video games. Now I\'m
         keen on 3D design and 3D printing. Feel free to ask me some questions.</string>
+    <string name="info_land">For personal info go to portrait view</string>
     <string name="send">SEND MESSAGE</string>
     <string name="hint_enter_text">Enter message</string>
     <string name="error_message">No mailing app</string>
